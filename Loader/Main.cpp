@@ -17,5 +17,6 @@ void main()
 	std::cout << GetRegistryManager()->GetGameLocation("{6F320B93-EE3C-4826-85E0-ADF79F8D4C61}") << std::endl;
 	GetLocationManager()->SetLocation("7DTD", GetRegistryManager()->GetGameLocation("Steam App 251570"));
 	GetLocationManager()->SortLocations();
-	std::cout << GetLocationManager()->GetLocation("7DTD1");
+	std::cout << GetLocationManager()->GetLocation("7DTD");
+	// So we have our location for where we need to put the file. Now we just need to place our payload
 }
