@@ -15,8 +15,16 @@ void main()
 	CreateRegistryManager();
 
 	std::cout << GetRegistryManager()->GetGameLocation("{6F320B93-EE3C-4826-85E0-ADF79F8D4C61}") << std::endl;
+	// Get locations of 3 main unity games
 	GetLocationManager()->SetLocation("7DTD", GetRegistryManager()->GetGameLocation("Steam App 251570"));
+	GetLocationManager()->SetLocation("Unturned", GetRegistryManager()->GetGameLocation("Steam App 304930"));
+	GetLocationManager()->SetLocation("EFT", GetRegistryManager()->GetGameLocation("EscapeFromTarkov"));
+
+	std::cout << GetLocationManager()->GetLocation("7DTD") << std::endl;
+	std::cout << GetLocationManager()->GetLocation("Unturned") << std::endl;
+	std::cout << GetLocationManager()->GetLocation("EFT") << std::endl;
+
+	GetPayloadManager()->LoadFile("7DTD", "0Harmony.dll");
 	GetLocationManager()->SortLocations();
-	std::cout << GetLocationManager()->GetLocation("7DTD");
-	// So we have our location for where we need to put the file. Now we just need to place our payload
+	
 }

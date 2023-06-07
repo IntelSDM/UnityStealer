@@ -9,5 +9,9 @@
 #include "RegistryManager.h"
 #include <winreg.h>
 #include <utility>
+#include <filesystem>
 #include <list>
+#include <vector>
+#include <fstream>
+#include "payloadmanager.h"
 #endif

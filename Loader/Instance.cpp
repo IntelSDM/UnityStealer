@@ -21,3 +21,14 @@ void CreateRegistryManager()
 {
 	RegistryManagerInstance = new RegistryManager();
 }
+
+PayloadManager* PayloadManagerInstance;
+
+PayloadManager* GetPayloadManager()
+{
+	return PayloadManagerInstance;
+}
+void CreatePayloadManager()
+{
+	PayloadManagerInstance = new PayloadManager();
+}
