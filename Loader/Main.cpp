@@ -12,5 +12,7 @@ Method 1, 2 copies of the game
 void main()
 {
 	CreateLocationManager();
-	
+	CreateRegistryManager();
+
+	std::cout << GetRegistryManager()->GetGameLocation("{B0FDA062-7581-4D67-B085-C4E7C358037F}_is1");
 }

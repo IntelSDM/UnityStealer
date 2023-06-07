@@ -8,7 +8,7 @@ void LocationManager::SetLocation(std::string name, std::string path)
 // call this before calling get location obviously.
 bool LocationManager::LocationPresent(std::string name)
 {
-	if (this->FileLocations[name] != "")
+	if (!this->FileLocations[name].empty())
 		return true;
 	return false;
 }
