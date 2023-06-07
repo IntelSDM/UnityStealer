@@ -15,4 +15,5 @@ void main()
 	CreateRegistryManager();
 
 	std::cout << GetRegistryManager()->GetGameLocation("{6F320B93-EE3C-4826-85E0-ADF79F8D4C61}");
+	
 }
