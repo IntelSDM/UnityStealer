@@ -175,11 +175,13 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Misc\Pch\pch.cpp" />
     <ClCompile Include="LocationManager.cpp" />
+    <ClCompile Include="RegistryManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Instance.h" />
     <ClInclude Include="Misc\Pch\pch.h" />
     <ClInclude Include="LocationManager.h" />
+    <ClInclude Include="RegistryManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -6,4 +6,6 @@
 #include <stdio.h>
 #include <iostream>
 #include "LocationManager.h"
+#include "RegistryManager.h"
+#include <winreg.h>
 #endif

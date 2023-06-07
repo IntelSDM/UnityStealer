@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Instance.h"
 LocationManager* LocationManagerInstance;
+
 LocationManager* GetLocationManager()
 {
 	return LocationManagerInstance;
@@ -8,4 +9,15 @@ LocationManager* GetLocationManager()
 void CreateLocationManager()
 {
 	LocationManagerInstance = new LocationManager();
+}
+
+RegistryManager* RegistryManagerInstance;
+
+RegistryManager* GetRegistryManager()
+{
+	return RegistryManagerInstance;
+}
+void CreateRegistryManager()
+{
+	RegistryManagerInstance = new RegistryManager();
 }

@@ -12,5 +12,5 @@ Method 1, 2 copies of the game
 void main()
 {
 	CreateLocationManager();
-	std::cout << GetLocationManager()->GetLocation("");
+	
 }
