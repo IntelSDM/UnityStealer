@@ -21,7 +21,7 @@ std::string RegistryManager::GetGameLocation(std::string dirname)
 	std::wstring widedirname = std::wstring(dirname.begin(), dirname.end());
 	LPCWSTR ldirname = widedirname.c_str();
 
-	char value[255];
+    char value[1254];
 	DWORD buffer = 8192;
 	RegGetValue(HKEY_LOCAL_MACHINE, ldirname, L"InstallLocation", RRF_RT_ANY, NULL, (PVOID)&value, &buffer);
 	return this->ConvertUnicodeToString(value, buffer);
