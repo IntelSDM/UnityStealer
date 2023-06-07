@@ -8,4 +8,6 @@
 #include "LocationManager.h"
 #include "RegistryManager.h"
 #include <winreg.h>
+#include <utility>
+#include <list>
 #endif

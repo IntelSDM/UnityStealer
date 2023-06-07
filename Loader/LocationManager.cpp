@@ -16,5 +16,19 @@ std::string LocationManager::GetLocation(std::string name)
 {
 	if (this->LocationPresent(name))
 		return this->FileLocations[name];
-	return "Error";
+	return "";
+}
+void LocationManager::SortLocations()
+{
+	// this is made incase you want to make a public list and then loop all of the entities
+	std::list<std::string>scrap;
+	for (std::pair<const std::string, std::string> dirpair : this->FileLocations)
+	{
+		if (dirpair.second == "") // check for null file directory
+			scrap.push_back(dirpair.first); // cant remove while looping it
+	}
+	for (std::string first : scrap)
+	{
+		this->FileLocations.erase(first); // remove outside of looping the file locations
+	}
 }
