@@ -14,7 +14,7 @@
   <img src="./Images/Instructions/2.png"
     style="width: 30%;" />
 </p>
-6. In the create method panel type ```.cctor``` as the name and then tick Static, SpecialName and RTSpecialName. Save it.Your panel should look like the screenshot:
+6. In the create method panel type .cctor as the name and then tick Static, SpecialName and RTSpecialName. Save it.Your panel should look like the screenshot:
 <p align="left">
   <img src="./Images/Instructions/3.png"
     style="width: 30%;" />
