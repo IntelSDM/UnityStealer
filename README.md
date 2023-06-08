@@ -7,6 +7,15 @@ If you read Windows internals you may know that each dll in an executable still 
 <br>
 
 ## How Does It Work?
-You compile a managed payload.dll with all of your malicious stuff in. 
-Then you need to edit a referenced dll from a unity game and then place it into the base directory of the game.
-Edit this file in dnspy, Add your dll as a byte array into the referenced dll and then call your initilizer function.
+1. You compile a managed payload.dll with all of your malicious stuff in. 
+2. Then you need to edit a referenced dll from a unity game and then place it into the base directory of the game.
+3. Edit this file in dnspy, Add your dll as a byte array into the referenced dll and then call your initilizer function.
+<br>
+To avoid agrovating any game integrity checks we load the dll from the base address which is a .Net 7 feature to load reference assemblies from the base address of any .Net executable. This means that no game will stop us opening it and prevent the payload from getting loaded into memory. It doesn't matter if further integrity checks happen once in a server or in a game lobby. As long as the module can get access to memory then it will be able to attack the user and the damage is already done. 
+
+* [Installing Guide](./Instructions.md)
+
+## Proper Usage
+This is just a POC to show how a harmless program can drop a much more harmfull program that is completely undetected at runtime by an anti virus. If you can bypass the basic scan heuristics then this will allow your dll to be fully executed undetected from any anti vurses. This can reach 100s of thousands of users with ease if you can drop a file on a computer. This could cause absolute havoc using a javascript website exploit to be able to set custom download paths for files or any other web attack that can alter file paths on a download.
+<br>
+Each game uses a different set of references with different versions. You should change the reference dll that you will be attacking with on each game. 
